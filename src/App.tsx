@@ -13,6 +13,7 @@ function App() {
     setGreetMsg(await invoke("greet", { name }));
   }
 
+  // ----------------------- Start added code -----------------------
   const isMounted = useRef(false);
 
   const startListeners = useCallback(async () => {
@@ -29,6 +30,7 @@ function App() {
   useEffect(() => {
     startListeners();
   }, [startListeners]);
+  // ----------------------- End added code -----------------------
 
   return (
     <div className="container">
